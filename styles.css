@@ -149,3 +149,28 @@ h3 {
 .footer a {
   color: #58a6ff;
 }
+
+/* To fix the issue with the featured-photo still appearing beside the autobiography-text when the width is decreased at a certain level */
+/* https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
+@media (max-width: 1200px) {
+    .autobiography-box {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .autobiography-text {
+      flex: none;
+      width: 100%;
+    }
+  
+    .featured-photo {
+      flex: none;
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  
+    .featured-photo img {
+      max-width: 100%;
+    }
+  }
+  
