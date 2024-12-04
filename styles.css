@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0d1117; /* similar to GitHub dark theme */
+  color: #c9d1d9;
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header and Navigation Bar */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #161b22;
+  padding: 10px 0;
+  padding-top: 40px;
+  border-bottom: 1px solid #444c56;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+.navigation ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation li {
+  margin: 0 15px;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Projects*/
+.projects {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  color: #f0f6fc;
+}
+
+.box {
+  background-color: #161b22;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+/* Poject Box */
+.project-box h3 a {
+  color: #58a6ff;
+}
+
+.project-box p {
+  color: #8b949e;
+}
+
+/* Skills Box */
+.skills-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills-box {
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+}
+
+.skills-box li,
+h3 {
+  color: #8b949e;
+}
+
+.skills-box ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Autobiography Box */
+.autobiography-text p {
+  color: #8b949e;
+  margin: 0 0 15px 0;
+  text-align: justify;
+}
+
+.autobiography-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.autobiography-text {
+  flex: 3;
+  line-height: 1.5;
+}
+
+.featured-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-photo img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #161b22;
+  padding: 10px 0;
+  text-align: center;
+  color: #8b949e;
+  border-top: 1px solid #444c56;
+}
+
+.footer a {
+  color: #58a6ff;
+}
+
+/* To fix the issue with the featured-photo still appearing beside the autobiography-text when the width is decreased at a certain level */
+/* https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
+@media (max-width: 1200px) {
+    .autobiography-box {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .autobiography-text {
+      flex: none;
+      width: 100%;
+    }
+  
+    .featured-photo {
+      flex: none;
+      width: 70%;
+      margin-bottom: 20px;
+    }
+  
+    .featured-photo img {
+      max-width: 100%;
+    }
+  }
+  
